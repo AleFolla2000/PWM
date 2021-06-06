@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <button onclick="crime()">Click me</button> 
+
+    <form id="invioDati">
+      <div>
+        <input type="text" name="citta" id="citta" placeholder="Inserisci una citta' per la ricerca del meteo"><br>
+        <input type="submit" value="cerca" onclick="chiamataAServizio()">
+      </div>
+    </form>
+
+    <script src="/javascripts/users.js"></script>
+  </body>
+</html>

@@ -14,8 +14,8 @@ function chiamataServizio()
             //Creo un nuovo elemento div 
             var newDiv = document.createElement("div");
             console.log("add")
-            newDiv.innerHtml= responseJson.location.region;
-
+            newDiv.innerHTML=responseJson.location.region;
+            document.body.appendChild(newDiv);
 
             }else{
 

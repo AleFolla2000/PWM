@@ -5,9 +5,19 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <script src="/javascripts/meteoc.js"></script>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <script src="/javascripts/meteoc.js"></script>
-    <button id="invioDati" onclick="chiamataServizio()"></button>
+    
+    <!--<button id="invioDati" onclick="chiamataServizio()">Cerca</button>
+    <button id="Mappa" onclick="creaMappa()">creaMappa</button>-->
+    
+    
+      <div>
+        <input type="text"  id="citta" placeholder="Inserisci una citta' per la ricerca del meteo"><br>
+        <button onclick="chiamataServizio()">Click me</button> 
+      </div>
+    
+  
   </body>
 </html>

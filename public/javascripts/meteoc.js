@@ -28,27 +28,32 @@ function chiamataServizio()
             var update = document.createElement("text");
             update.innerHTML="Ultimo aggiornamento: "+responseJson.current.last_updated;
             document.body.appendChild(update);
-            //Temperatura
-            var temperatura = document.createElement("text");
-            temperatura.innerHTML="<br>Temperatura C: "+responseJson.current.temp_c + "<br>Temperatura F: "+responseJson.current.temp_f;
-            document.body.appendChild(temperatura);
+            
             //Condizioni
             var condizioni = document.createElement("text");
             condizioni.innerHTML="<br>Condizioni meteo: "+responseJson.current.condition.text;
             document.body.appendChild(condizioni);
-            //Immagine
-            //var immagine = document.createElement("img");
-            //immagine.src ="responseJson.current.condition.icon"
-            //document.body.appendChild(immagine);
-          //  document.getElementById('img').src="responseJson.current.condition.icon";
-
-          var imageParent = document.getElementById("icona");
-          var image = document.createElement("img");
-          image.id = "immagine";
-          image.className = "class";
-          image.src = responseJson.current.condition.icon;            
-          imageParent.appendChild(image);
+         
+            //Temperatura
+            var padre = document.getElementById("tmpID");
+            var temperatura = document.createElement("text");
+            temperatura.innerHTML=responseJson.current.temp_c+"&deg";
+            padre.appendChild(temperatura);
+ 
+            padre = document.getElementById("icona");
+            var image = document.createElement("img");
+            image.id = "immagine";
+            image.className = "class";
+            image.src = responseJson.current.condition.icon;            
+            padre.appendChild(image);
             
+
+             //Città
+            padre = document.getElementById("nomeC");
+            var city = document.createElement("text");
+            city.innerHTML=responseJson.location.name;
+            padre.appendChild(city);
+        
             /*
            //vento 
            var vento = document.createElement("text");

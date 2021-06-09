@@ -23,6 +23,7 @@ function chiamataServizio()
 
             initMap(latitudine,Longitudine);
 
+            
             //Ultimo Aggiornamento
             var update = document.createElement("text");
             update.innerHTML="Ultimo aggiornamento: "+responseJson.current.last_updated;
@@ -36,9 +37,18 @@ function chiamataServizio()
             condizioni.innerHTML="<br>Condizioni meteo: "+responseJson.current.condition.text;
             document.body.appendChild(condizioni);
             //Immagine
-            var icona = document.createElement("img");
-            icona.innerHTML=responseJson.current.condition.icon;
-            document.body.appendChild(icona);
+            //var immagine = document.createElement("img");
+            //immagine.src ="responseJson.current.condition.icon"
+            //document.body.appendChild(immagine);
+          //  document.getElementById('img').src="responseJson.current.condition.icon";
+
+          var imageParent = document.getElementById("icona");
+          var image = document.createElement("img");
+          image.id = "immagine";
+          image.className = "class";
+          image.src = responseJson.current.condition.icon;            
+          imageParent.appendChild(image);
+            
             /*
            //vento 
            var vento = document.createElement("text");
@@ -66,6 +76,12 @@ function chiamataServizio()
 function initMap(x,y){
     if(x !=undefined && y!=undefined)
     {
+        //correzione API su Milnao 
+        if(x==52.13&&y==20.68) 
+        {
+            x=45.4668;
+            y=9.1905;
+        }
       //opzioni 
       var options = {
            zoom:10,

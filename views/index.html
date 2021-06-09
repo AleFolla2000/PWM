@@ -18,6 +18,22 @@
         <button onclick="chiamataServizio()">Click me</button> 
       </div>
     
-  
+      <style>
+        #map{
+          height: 400px;
+          width: 100%;
+        }
+
+      </style>
+      <h1>La mia mappa</h1>
+      <div id="map"></div>
+
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJl19Cvi_OmCGDSzLQIUsv3AcEnQMmnms&callback=initMap&libraries=&v=weekly"
+        async
+      ></script>
+      
+
   </body>
 </html>

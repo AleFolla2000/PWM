@@ -15,6 +15,16 @@ function chiamataServizio()
             newDiv.innerHTML=responseJson.location.region;
             document.body.appendChild(newDiv);
 
+            var latitudine = responseJson.location.lat;
+            console.log(latitudine);
+            
+            var Longitudine = responseJson.location.lat;
+            console.log(Longitudine);
+
+            //console.log(responseJson.location.region);
+            //newDiv.innerHTML=responseJson.location.lon;
+            //document.body.appendChild(newDiv);
+
             }else{
                 console.log("ERRORE");
             }
@@ -33,3 +43,18 @@ function chiamataServizio()
 
 }
 
+function initMap(){
+    //opzioni 
+    var options = {
+        zoom:10,
+        center: {lat: 46.1324186, lng:9.5694737}
+    }
+    //creazione della mappa
+    var map = new google.maps.Map(document.getElementById('map'),options);
+    //aggiungo il marker
+    var marker = new google.maps.Marker({
+        position: {lat: 46.1324186, lng:9.5694737},
+        map:map
+    })
+
+}

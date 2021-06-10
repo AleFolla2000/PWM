@@ -7,10 +7,10 @@
   <body>
     <script src="/javascripts/meteoc.js"></script>
     <h1 class="centro"><%= title %></h1>
-    <p class="centro">Benvenuto su <%= title %> qui poi cercare il meteo della tua citta;</p>
+    <p class="centro">Benvenuto su <%= title %> qui poi cercare il meteo della tua citta&acute;</p>
 
     <div class="inserimento">
-      <input class="cerca" type="text"  id="citta" placeholder="Inserisci una citta&acute">
+      <input class="cerca" type="text"  id="citta" placeholder="Inserisci una citta&acute;">
       <button id="inv" onclick="chiamataServizio()">Cerca</button> 
     </div>
 
@@ -29,12 +29,17 @@
             <span class="wind" id="ventoID">Vento:</span>
           </div>
         </div>
-        
       </div>
     </div>
-    <div >
-
-
+ 
+    <div class="moreinfo">
+      Maggiori informazioni<br>
+      <span id="condizioniID" id="pioggiaID">Le condizioni meteo sono:</span><br>
+      <span id="UmiditaID" id="pioggiaID">Umidita&acute;:</span><br>
+      <span id="uvID" id="pioggiaID">intensi&acute; UV:</span><br>
+      <span id="maxiID" id="pioggiaID">Le temperatura massima odierna:</span><br>
+      <span id="miniID" id="pioggiaID">Le temperatura minima odierna:</span><br>
+      <span id="avgiID" id="pioggiaID">Le temperatura media odierna:</span><br>
     </div>
       <style>
         #map{

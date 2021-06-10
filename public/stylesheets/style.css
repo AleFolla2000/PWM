@@ -29,7 +29,7 @@ a {
 	padding: 0;
 	border: 0;
 	border-left: 1px solid #888;
-	background: #e79b3e url("https://www.html.it/articoli/4002/lente_trasparente.png") no-repeat center center;
+	background: #e79b3e;
 	box-sizing: border-box;
 	color: black;
 
@@ -77,6 +77,22 @@ body {
 	height: 200px;
 	font-family: 'Open Sans';
 	position: relative;
+}
+.moreinfo{
+	width: 400px;
+	height: 200px;
+	font-family: 'Open Sans';
+	font-size: large;
+	position: relative;
+	color: white;
+	background-color:rgb(41, 41, 41);
+	line-height: 25px;
+	padding-left: 1%;
+	padding-top: 1%;
+	margin-right:auto;
+	margin-left:auto;
+		
+
 }
 .currentTemp{
 	width: 220px;

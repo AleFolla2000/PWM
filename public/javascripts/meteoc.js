@@ -10,10 +10,8 @@ function chiamataServizio()
             if(this.status==200){
         //    console.log(this.responseText);
             var responseJson = JSON.parse(this.responseText);
-            var newDiv = document.createElement("div");
-            console.log(responseJson.location.region);
-            newDiv.innerHTML=responseJson.location.region;
-            document.body.appendChild(newDiv);
+ 
+           
 
             var latitudine = responseJson.location.lat;
             console.log(latitudine);
@@ -23,19 +21,6 @@ function chiamataServizio()
 
             initMap(latitudine,Longitudine);
 
-            
-            //Ultimo Aggiornamento
-            var update = document.createElement("text");
-            update.innerHTML="Ultimo aggiornamento: "+responseJson.current.last_updated;
-            document.body.appendChild(update);
-            
-            //Condizioni
-            var condizioni = document.createElement("text");
-            condizioni.innerHTML="<br>Condizioni meteo: "+responseJson.current.condition.text;
-            document.body.appendChild(condizioni);
-           
-            var divmet = document.getElementById("weather_wrapper");
-    
          
   
             //Temperatura
@@ -79,6 +64,46 @@ function chiamataServizio()
             vento.innerHTML=responseJson.current.wind_kph;
             padre.appendChild(vento);
 
+            //Condizioni
+            padre = document.getElementById("condizioniID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            var cond = document.createElement("text");
+            cond.innerHTML=responseJson.current.condition.text;
+            padre.appendChild(cond);
+
+            //umidità
+            padre = document.getElementById("UmiditaID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            var umidi = document.createElement("text");
+            umidi.innerHTML=responseJson.current.humidity;
+            padre.appendChild(umidi);
+         
+             //UV
+             padre = document.getElementById("uvID");
+             if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+             var uv = document.createElement("text");
+             uv.innerHTML=responseJson.current.uv;
+             padre.appendChild(uv);
+          
+            //temperatura max
+            padre = document.getElementById("maxiID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            var max = document.createElement("text");
+            max.innerHTML=responseJson.forecast.forecastday[0].day.maxtemp_c;;
+            padre.appendChild(max);
+            //temperatura min
+            padre = document.getElementById("miniID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            var min = document.createElement("text");
+            min.innerHTML=responseJson.forecast.forecastday[0].day.mintemp_c;;
+            padre.appendChild(min);
+            //temperatura avg
+            padre = document.getElementById("avgiID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            var avg = document.createElement("text");
+            avg.innerHTML=responseJson.forecast.forecastday[0].day.avgtemp_c;;
+            padre.appendChild(avg);
+         
  
        
             }else{

@@ -13,7 +13,7 @@
       <input type="text"  id="citta" placeholder="Inserisci una citta' per la ricerca del meteo"><br>
       <button onclick="chiamataServizio()">Click me</button> 
     </div>
-
+    <!--GRAFICA-->
     <div id="weather_wrapper">
       <div class="weatherCard">
         <div class="currentTemp">
@@ -23,15 +23,12 @@
         <div class="currentWeather">
           <span class="conditions" id="icona"></span>
           <div class="info">
-            <span class="rain">1.3 MM</span>
-            <span class="wind">10 MPH</span>
+            <span class="rain" id="pioggiaID">Pioggia:</span>
+            <span class="wind" id="ventoID">Vento:</span>
           </div>
         </div>
       </div>
     </div>
-    
-    
-
       <style>
         #map{
           height: 400px;

@@ -33,12 +33,16 @@ function chiamataServizio()
             var condizioni = document.createElement("text");
             condizioni.innerHTML="<br>Condizioni meteo: "+responseJson.current.condition.text;
             document.body.appendChild(condizioni);
-         
+                
+
+           
             //Temperatura
             var padre = document.getElementById("tmpID");
             var temperatura = document.createElement("text");
             temperatura.innerHTML=responseJson.current.temp_c+"&deg";
             padre.appendChild(temperatura);
+
+            //ICONA
  
             padre = document.getElementById("icona");
             var image = document.createElement("img");
@@ -48,18 +52,29 @@ function chiamataServizio()
             padre.appendChild(image);
             
 
-             //Città
+            //Città
             padre = document.getElementById("nomeC");
             var city = document.createElement("text");
             city.innerHTML=responseJson.location.name;
             padre.appendChild(city);
+
+            
         
-            /*
-           //vento 
-           var vento = document.createElement("text");
-           vento.innerHTML="<br>Temperatura C: "+responseJson.current.temp_c + "<br>Temperatura F: "+responseJson.current.temp_f;
-           document.body.appendChild(Vento);
-                */
+            //Precipitazioni
+            padre = document.getElementById("pioggiaID");
+            var pioggia = document.createElement("text");
+            pioggia.innerHTML=responseJson.current.precip_mm;
+            padre.appendChild(pioggia);
+                
+    
+            //Vento
+            padre = document.getElementById("ventoID");
+            var vento = document.createElement("text");
+            vento.innerHTML=responseJson.current.wind_kph;
+            padre.appendChild(vento);
+            
+  
+
             }else{
                 console.log("ERRORE");
             }

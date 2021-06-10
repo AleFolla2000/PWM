@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 
 body {
@@ -75,34 +75,22 @@ body {
 	text-align: center;
 }
 .rain {
+	padding-top: 10%;
 	width: 50%;
 	position: absolute;
 	left: 10px;
 	word-spacing: 60px;
 	top: 3px;
 }
-.rain::before{
-	display: block;
-	content: '\f04e';
-	font-family: weathericons;
-	font-size: 40px;
-	left: 6px;
-	top: -4px;
-	position: absolute;
-}
+
+
 .wind {
+	padding-top: 10%;
 	width: 50%;
 	right: -10px;
 	position: absolute;
 	word-spacing: 60px;
 	top: 3px;
 }
-.wind::before{
-	display: block;
-	content: '\f050';
-	font-family: weathericons;
-	font-size: 25px;
-	left: -10px;
-	position: absolute;
-	top: 5px;
-}
+
+

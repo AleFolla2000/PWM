@@ -6,8 +6,8 @@
   </head>
   <body>
     <script src="/javascripts/meteoc.js"></script>
-    <h1 class="centro"><%= title %></h1>
-    <p class="centro">Benvenuto su <%= title %> qui poi cercare il meteo della tua citta&acute;</p>
+    <h1 class="cent"><%= title %></h1>
+    <p class="cent">Benvenuto su <%= title %> qui poi cercare il meteo della tua citta&acute;</p>
 
     <div class="inserimento">
       <input class="cerca" type="text"  id="citta" placeholder="Inserisci una citta&acute;">
@@ -31,16 +31,37 @@
         </div>
       </div>
     </div>
- 
+  <div class="centro">
     <div class="moreinfo">
-      Maggiori informazioni<br>
-      <span id="condizioniID" id="pioggiaID">Le condizioni meteo sono:</span><br>
-      <span id="UmiditaID" id="pioggiaID">Umidita&acute;:</span><br>
-      <span id="uvID" id="pioggiaID">intensi&acute; UV:</span><br>
-      <span id="maxiID" id="pioggiaID">Le temperatura massima odierna:</span><br>
-      <span id="miniID" id="pioggiaID">Le temperatura minima odierna:</span><br>
-      <span id="avgiID" id="pioggiaID">Le temperatura media odierna:</span><br>
+      Oggi<br>
+      <span id="condizioniID">Le condizioni meteo sono: </span><br>
+      <span id="UmiditaID">Umidita&acute;: </span><br>
+      <span id="uvID">intensi&acute; UV: </span><br>
+      <span id="maxiID">Le temperatura massima odierna: </span><br>
+      <span id="miniID">Le temperatura minima odierna: </span><br>
+      <span id="avgiID">Le temperatura media odierna: </span><br>
+      <span id="aggiornamentoID">Ultimo aggiornamento: </span><br>
     </div>
+    <div class="moreinfo1">
+      Domani<br>
+      <span id="maxiID1">Temperatura massima: </span><br>
+      <span id="miniID1">Temperatura minima: </span><br>
+      <span id="prec1">Totale precipitazioni:</span><br>
+      <span id="condiz1">Previsioni: </span><br>
+      <span id="ico1"></span><br>
+      
+    </div>
+    <div class="moreinfo2">
+      Dopo Domani<br>
+      <span id="maxiID2">Le condizioni meteo sono: </span><br>
+      <span id="miniID2">Temperatura minima:</span><br>
+      <span id="prec2">Totale precipitazioni: </span><br>
+      <span id="condiz2">Previsioni: </span><br>
+      <span id="ico2"></span><br>
+
+    </div>
+  </div>
+  <br>
       <style>
         #map{
           height: 400px;

@@ -64,7 +64,7 @@ function chiamataServizio()
             vento.innerHTML=responseJson.current.wind_kph;
             padre.appendChild(vento);
 
-            //Condizioni
+            //Condizioni 0
             padre = document.getElementById("condizioniID");
             if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
             var cond = document.createElement("text");
@@ -101,10 +101,90 @@ function chiamataServizio()
             padre = document.getElementById("avgiID");
             if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
             var avg = document.createElement("text");
-            avg.innerHTML=responseJson.forecast.forecastday[0].day.avgtemp_c;;
+            avg.innerHTML=responseJson.forecast.forecastday[0].day.avgtemp_c;
             padre.appendChild(avg);
-         
- 
+            //Ultimo aggiornamento
+            padre = document.getElementById("aggiornamentoID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            var agg = document.createElement("text");
+            agg.innerHTML=responseJson.current.last_updated;
+            padre.appendChild(agg);
+
+            //Condizioni 1 --------------------------------------------------------
+
+             //temperatura max
+             padre = document.getElementById("maxiID1");
+             if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+             max = document.createElement("text");
+             max.innerHTML=responseJson.forecast.forecastday[1].day.maxtemp_c;;
+             padre.appendChild(max);
+             //temperatura min
+             padre = document.getElementById("miniID1");
+             if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+             min = document.createElement("text");
+             min.innerHTML=responseJson.forecast.forecastday[1].day.mintemp_c;;
+             padre.appendChild(min);
+            
+             //Precipitazioni
+            padre = document.getElementById("prec1");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            pioggia = document.createElement("text");
+            pioggia.innerHTML=responseJson.forecast.forecastday[1].day.totalprecip_mm;
+            padre.appendChild(pioggia);
+
+             //Condizioni 0
+             padre = document.getElementById("condiz1");
+             if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+             cond = document.createElement("text");
+             cond.innerHTML=responseJson.forecast.forecastday[1].day.condition.text;
+             padre.appendChild(cond);
+
+            //ICONA
+            padre = document.getElementById("ico1");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            image = document.createElement("img");
+            image.id = "immagine";
+            image.className = "class";
+            image.src = responseJson.forecast.forecastday[1].day.condition.icon;            
+            padre.appendChild(image);
+
+            //Codizioni 2 -------------------------------------------------------------------------
+                  
+            //temperatura max
+            padre = document.getElementById("maxiID2");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            max = document.createElement("text");
+            max.innerHTML=responseJson.forecast.forecastday[2].day.maxtemp_c;;
+            padre.appendChild(max);
+            //temperatura min
+            padre = document.getElementById("miniID2");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            min = document.createElement("text");
+            min.innerHTML=responseJson.forecast.forecastday[2].day.mintemp_c;;
+            padre.appendChild(min);
+           
+            //Precipitazioni
+           padre = document.getElementById("prec2");
+           if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+           pioggia = document.createElement("text");
+           pioggia.innerHTML=responseJson.forecast.forecastday[2].day.totalprecip_mm;
+           padre.appendChild(pioggia);
+
+            //Condizioni 0
+            padre = document.getElementById("condiz2");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+            cond = document.createElement("text");
+            cond.innerHTML=responseJson.forecast.forecastday[2].day.condition.text;
+            padre.appendChild(cond);
+
+           //ICONA
+           padre = document.getElementById("ico2");
+           if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
+           image = document.createElement("img");
+           image.id = "immagine";
+           image.className = "class";
+           image.src = responseJson.forecast.forecastday[2].day.condition.icon;            
+           padre.appendChild(image);   
        
             }else{
                 console.log("ERRORE");

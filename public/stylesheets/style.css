@@ -9,9 +9,13 @@ a {
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
-
-.centro{
+.cent{
 	text-align: center;
+
+}
+.centro{
+	margin-right:20%;
+	margin-left: 20%;
 }
 .inserimento{
 	padding-top: 1%;
@@ -79,6 +83,42 @@ body {
 	position: relative;
 }
 .moreinfo{
+	float:left; 
+	margin-left:5px;
+	width: 400px;
+	height: 200px;
+	font-family: 'Open Sans';
+	font-size: large;
+	position: relative;
+	color: white;
+	background-color:rgb(41, 41, 41);
+	line-height: 25px;
+	padding-left: 1%;
+	padding-top: 1%;
+	margin-right:2%;
+	margin-left:auto;
+}
+.moreinfo1{
+	float:left; 
+	margin-left:5px;
+	width: 400px;
+	height: 200px;
+	font-family: 'Open Sans';
+	font-size: large;
+	position: relative;
+	color: white;
+	background-color:rgb(41, 41, 41);
+	line-height: 25px;
+	padding-left: auto;
+	padding-top: 1%;
+	margin-right:2%;
+	margin-left:auto;
+
+
+}
+.moreinfo2{
+	float:left; 
+	margin-left:5px;
 	width: 400px;
 	height: 200px;
 	font-family: 'Open Sans';
@@ -90,8 +130,8 @@ body {
 	padding-left: 1%;
 	padding-top: 1%;
 	margin-right:auto;
-	margin-left:auto;
-		
+	margin-left: auto;
+	
 
 }
 .currentTemp{
@@ -163,5 +203,4 @@ body {
 	word-spacing: 60px;
 	top: 3px;
 }
-
 

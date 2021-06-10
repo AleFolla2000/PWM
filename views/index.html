@@ -6,13 +6,15 @@
   </head>
   <body>
     <script src="/javascripts/meteoc.js"></script>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1 class="centro"><%= title %></h1>
+    <p class="centro">Benvenuto su <%= title %> qui poi cercare il meteo della tua citta;</p>
 
-    <div>
-      <input type="text"  id="citta" placeholder="Inserisci una citta' per la ricerca del meteo"><br>
-      <button onclick="chiamataServizio()">Click me</button> 
+    <div class="inserimento">
+      <input class="cerca" type="text"  id="citta" placeholder="Inserisci una citta&acute">
+      <button id="inv" onclick="chiamataServizio()">Cerca</button> 
     </div>
+
+
     <!--GRAFICA-->
     <div id="weather_wrapper">
       <div class="weatherCard">
@@ -27,7 +29,12 @@
             <span class="wind" id="ventoID">Vento:</span>
           </div>
         </div>
+        
       </div>
+    </div>
+    <div >
+
+
     </div>
       <style>
         #map{

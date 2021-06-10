@@ -10,6 +10,61 @@ a {
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 
+.centro{
+	text-align: center;
+}
+.inserimento{
+	padding-top: 1%;
+	padding: 0;
+
+	width: 300px;
+	margin-right:auto; 
+	margin-left:auto;
+	width:300px;
+	
+}
+#inv {
+	width: 30%;
+	height: 28px;
+	padding: 0;
+	border: 0;
+	border-left: 1px solid #888;
+	background: #e79b3e url("https://www.html.it/articoli/4002/lente_trasparente.png") no-repeat center center;
+	box-sizing: border-box;
+	color: black;
+
+	border: 1px solid #000;
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	border-radius: 14px;
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+	
+	}
+
+#citta{
+	
+	width: 70%;
+	height: 28px;
+	padding: 0 10px;
+	background: white;
+	border: 0;
+	float: left;
+	box-sizing: border-box;
+	text-align: center;
+		
+	}
+.cerca{
+	border: 1px solid #000;
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	border-radius: 14px;
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+
+}
 body {
 	background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
 }

@@ -33,18 +33,21 @@ function chiamataServizio()
             var condizioni = document.createElement("text");
             condizioni.innerHTML="<br>Condizioni meteo: "+responseJson.current.condition.text;
             document.body.appendChild(condizioni);
-                
-
            
+            var divmet = document.getElementById("weather_wrapper");
+    
+         
+  
             //Temperatura
             var padre = document.getElementById("tmpID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
             var temperatura = document.createElement("text");
             temperatura.innerHTML=responseJson.current.temp_c+"&deg";
             padre.appendChild(temperatura);
 
             //ICONA
- 
             padre = document.getElementById("icona");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
             var image = document.createElement("img");
             image.id = "immagine";
             image.className = "class";
@@ -54,6 +57,7 @@ function chiamataServizio()
 
             //Città
             padre = document.getElementById("nomeC");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
             var city = document.createElement("text");
             city.innerHTML=responseJson.location.name;
             padre.appendChild(city);
@@ -62,6 +66,7 @@ function chiamataServizio()
         
             //Precipitazioni
             padre = document.getElementById("pioggiaID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
             var pioggia = document.createElement("text");
             pioggia.innerHTML=responseJson.current.precip_mm;
             padre.appendChild(pioggia);
@@ -69,12 +74,13 @@ function chiamataServizio()
     
             //Vento
             padre = document.getElementById("ventoID");
+            if(padre.lastElementChild) padre.removeChild(padre.lastElementChild);
             var vento = document.createElement("text");
             vento.innerHTML=responseJson.current.wind_kph;
             padre.appendChild(vento);
-            
-  
 
+ 
+       
             }else{
                 console.log("ERRORE");
             }

@@ -11,6 +11,11 @@ a {
 @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 .cent{
 	text-align: center;
+}
+
+.cent2{
+	text-align: center;
+	font-size: large;
 
 }
 .centro{
@@ -46,6 +51,12 @@ a {
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
 	
 	}
+#inv:hover{
+	background: #3ec5e7;
+
+
+
+}
 
 #citta{
 	
@@ -82,55 +93,60 @@ body {
 	font-family: 'Open Sans';
 	position: relative;
 }
+
 .moreinfo{
-	float:left; 
-	margin-left:5px;
+	margin-left: 15%;
+	float: left;
+	position: relative;
 	width: 400px;
-	height: 200px;
+	height: 285px;
 	font-family: 'Open Sans';
 	font-size: large;
 	position: relative;
 	color: white;
 	background-color:rgb(41, 41, 41);
-	line-height: 25px;
-	padding-left: 1%;
-	padding-top: 1%;
-	margin-right:2%;
-	margin-left:auto;
+	line-height: 28px;
+	margin-top: 1%;
+	padding-left: 35px;
+	padding-top: 35px;
+	border-radius: 16%;
+	
 }
 .moreinfo1{
-	float:left; 
+	float: left;
 	margin-left:5px;
 	width: 400px;
-	height: 200px;
+	height: 285px;
 	font-family: 'Open Sans';
 	font-size: large;
 	position: relative;
 	color: white;
 	background-color:rgb(41, 41, 41);
-	line-height: 25px;
-	padding-left: auto;
-	padding-top: 1%;
-	margin-right:2%;
-	margin-left:auto;
-
-
+	line-height: 28px;
+	margin-left: 2%;
+	margin-top: 1%;
+	padding-left: 35px;
+	padding-top: 35px;
+	border-radius: 16%;
 }
+
 .moreinfo2{
-	float:left; 
-	margin-left:5px;
+	
+	float: left;
 	width: 400px;
-	height: 200px;
+	height: 285px;
 	font-family: 'Open Sans';
 	font-size: large;
 	position: relative;
 	color: white;
 	background-color:rgb(41, 41, 41);
-	line-height: 25px;
-	padding-left: 1%;
-	padding-top: 1%;
-	margin-right:auto;
-	margin-left: auto;
+	line-height: 28px;
+	margin-left: 2%;
+	margin-top: 1%;
+	padding-left: 35px;
+	padding-top: 35px;
+	border-radius: 16%;
+
 	
 
 }
@@ -204,3 +220,23 @@ body {
 	top: 3px;
 }
 
+.previsioni{
+
+	align-items: center;
+	margin: auto;
+	width: 100%;
+	height: 230px;
+}
+
+.mappa{
+	top: 100px;
+	position: relative;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 100px;
+}
+#map{
+	height: 500px;
+	width: 100%;
+  }

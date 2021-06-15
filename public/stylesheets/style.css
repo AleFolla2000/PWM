@@ -1,16 +1,25 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 100%;
+  margin-left: 0px; 
+  margin-top: 0px;
+  background: rgb(20,136,204);
+  background: linear-gradient(90deg, rgba(20,136,204,1) 0%, rgba(20,136,204,1) 44%, rgba(43,50,178,1) 100%); 
+
 }
 
 a {
   color: #00B7FF;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css);
 .cent{
 	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .cent2{
@@ -52,7 +61,7 @@ a {
 	
 	}
 #inv:hover{
-	background: #3ec5e7;
+	background: rgb(20,136,204)
 
 
 
@@ -63,7 +72,7 @@ a {
 	width: 70%;
 	height: 28px;
 	padding: 0 10px;
-	background: white;
+	background: rgb(212, 206, 206);
 	border: 0;
 	float: left;
 	box-sizing: border-box;
@@ -80,9 +89,7 @@ a {
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
 
 }
-body {
-	background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
-}
+
 #weather_wrapper{
 	width: 400px;
 	margin: 100px auto;
@@ -239,4 +246,13 @@ body {
 #map{
 	height: 500px;
 	width: 100%;
+  }
+
+  #intro{
+	
+	width: 100%;
+	color: rgb(255, 255, 255);
+	background-color: rgb(41, 41, 41);
+	padding-bottom: 1.8%;
+	padding-top: 1.8%;
   }

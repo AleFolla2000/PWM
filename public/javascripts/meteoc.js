@@ -185,12 +185,10 @@ function chiamataServizio()
            image.className = "class";
            image.src = responseJson.forecast.forecastday[2].day.condition.icon;            
            padre.appendChild(image);   
-       
+
             }else{
                 console.log("ERRORE");
             }
- 
-
         }
     });
     
